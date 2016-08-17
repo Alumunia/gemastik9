@@ -1,0 +1,73 @@
+/* Simpelik Style Sheet
+** V1.0
+** Project by Khaidir Afif, Rizki Adi Utomo, Fitri Juariah
+*/
+
+body {
+	background: url(../images/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	font-family: 'Montserrat', sans-serif;
+
+	height: 100%;
+	background-color: #060;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Color library */
+.color-primary {
+	color: #93db70;
+}
+
+.color-primary-dark {
+	color: #61b03a;
+}
+
+.color-secondary {
+	color: #94d09d;
+}
+
+.color-accent {
+	color: #a2add0;
+}
+
+/* Home logo */
+.img-logo {
+	height: 90px;
+	width: 75px;
+	margin: 50px auto 0 auto;
+}
+
+
+/* Login box style */
+.login-box {
+	padding: 10px;
+	background: rgba(255,255,255,0.5);
+	border-top: solid 5px #93db70;
+}
+
+.input-box {
+	width: 100%;
+	margin: 10px auto;
+}
+
+.input-btn {
+	width: 100%;
+	background-color: #93db70;
+	border-color: #93db70;
+}
+
+.input-btn:hover {
+	background-color: #94d09d;
+	border-color: #94d09d;
+}
+
+.input-btn:active, .input-btn:visited, .input-btn:focus {
+	background-color: #61b03a !important;
+	border-color: #61b03a !important;
+}

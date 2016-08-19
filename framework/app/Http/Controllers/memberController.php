@@ -21,9 +21,8 @@ class memberController extends Controller {
 
     public function getTahap1() {
         return view('tahap1Form', array(
-            'title'=>'Tahap 1'
-        ))
-        
+            'title' => 'Tahap 1'
+        ));
     }
 
     public function postTahap1() {
@@ -31,7 +30,9 @@ class memberController extends Controller {
     }
 
     public function getTahap2() {
-        
+        return view('tahap2Form', array(
+            'title' => 'Tahap 2'
+        ));
     }
 
     public function postTahap2() {
@@ -39,7 +40,9 @@ class memberController extends Controller {
     }
 
     public function getTahap3() {
-        
+        return view('tahap3Form', array(
+            'title' => 'Tahap 3'
+        ));
     }
 
     public function postTahap3() {

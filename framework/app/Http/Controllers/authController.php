@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use App\question;
 
-class homeController extends Controller {
+class authController extends Controller {
 
     public function __construct() {
         $this->question = \App\Question::all();

@@ -24,6 +24,6 @@ class question_table_seeder extends Seeder
         DB::table('question')->insert(['question' => 'Kabupaten','parameter'=>'kabupaten','type'=>'text']);
         DB::table('question')->insert(['question' => 'Email','parameter'=>'email','type'=>'text']);
         DB::table('question')->insert(['question' => 'Nomor HP','parameter'=>'noHP','type'=>'text']);
-        DB::table('question')->insert(['question' => 'Nomor Telp Rumah','parameter'=>'nomorTelpRumah','type'=>'text']);
+        DB::table('question')->insert(['question' => 'Nomor Telp Rumah','parameter'=>'noTelpRumah','type'=>'text']);
     }
 }

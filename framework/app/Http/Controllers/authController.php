@@ -60,8 +60,7 @@ class authController extends Controller {
         $parameterName = $this->question->pluck('parameter');
         $member = new \App\Members;
         for ($i = 0; $i < sizeof($this->question); $i++) {
-//            echo $parameterName;
-            echo $question;
+            $member->$parameterName[$i] = Input::get($parameterName[$i]);
         }
 
         $member->save();

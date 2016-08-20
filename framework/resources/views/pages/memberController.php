@@ -17,11 +17,13 @@ class memberController extends Controller {
     }
 
     public function index() {
-        
+        return view('pages/homePage', array(
+            'title' => 'home'
+        ));
     }
 
     public function getTahap1() {
-        return view('tahap1Form', array(
+        return view('pages/tahap1Form', array(
             'title' => 'Tahap 1'
         ));
     }
@@ -51,7 +53,7 @@ class memberController extends Controller {
     }
 
     public function getTahap3() {
-        return view('tahap3Form', array(
+        return view('pages/tahap3Form', array(
             'title' => 'Tahap 3'
         ));
     }

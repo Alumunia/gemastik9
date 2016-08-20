@@ -21,7 +21,7 @@ class authController extends Controller {
     }
 
     public function getLogin() {
-        return view('loginPage', array(
+        return view('pages/loginPage', array(
             'title' => 'Login Page',
             'question' => $this->question->take(2)
         ));
@@ -49,7 +49,7 @@ class authController extends Controller {
     }
 
     public function getRegister() {
-        return view('registerPage', array(
+        return view('pages/registerPage', array(
             'title' => 'Register Page',
             'question' => $this->question
         ));

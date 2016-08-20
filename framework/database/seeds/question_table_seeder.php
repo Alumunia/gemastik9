@@ -22,7 +22,6 @@ class question_table_seeder extends Seeder
         DB::table('question')->insert(['question' => 'Kewarganegaraan','parameter'=>'kewarganegaraan','type'=>'text']);
         DB::table('question')->insert(['question' => 'Provinsi','parameter'=>'provinsi','type'=>'text']);
         DB::table('question')->insert(['question' => 'Kabupaten','parameter'=>'kabupaten','type'=>'text']);
-        DB::table('question')->insert(['question' => 'Kode POS','parameter'=>'kodePOS','type'=>'text']);
         DB::table('question')->insert(['question' => 'Email','parameter'=>'email','type'=>'text']);
         DB::table('question')->insert(['question' => 'Nomor HP','parameter'=>'noHP','type'=>'text']);
         DB::table('question')->insert(['question' => 'Nomor Telp Rumah','parameter'=>'nomorTelpRumah','type'=>'text']);

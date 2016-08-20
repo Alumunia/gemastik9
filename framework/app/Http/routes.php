@@ -18,11 +18,13 @@ Route::post('/postRegister', 'authController@postRegister');
 Route::get('/login', 'authController@getLogin');
 Route::post('/login', 'authController@postLogin');
 
-Route::get('/registrasi','homeController@register');
-
+Route::get('/registrasi', 'homeController@register');
+Route::get('/home', 'memberController@index');
+Route::get('/tahap-1', 'memberController@getTahap1');
 Route::group(['middleware' => ['web', 'member']], function() {
+
+    // Home
     // Tahap 1
-    Route::get('/tahap-1', 'memberController@getTahap1');
     Route::post('/tahap-1', 'memberController@postTahap1');
 
 // Tahap 2

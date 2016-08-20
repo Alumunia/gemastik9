@@ -19,7 +19,18 @@ class authController extends Controller {
     public function index() {
         return view('index');
     }
+    
+    public function getLogin(){
+        return view('loginPage', array(
+            'title' => 'Login Page'
+          'question' => $this->question->take(2),
+        ));
+    }
 
+    public function postLogin(){
+        
+        
+    }
     public function getRegister() {
         return view('registerPage', array(
             'title' => 'Register Page',

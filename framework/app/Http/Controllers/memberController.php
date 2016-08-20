@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 
 class memberController extends Controller {
 
@@ -25,14 +26,24 @@ class memberController extends Controller {
         ));
     }
 
-    public function postTahap1() {
-        
+    public function postTahap1(Request $request) {
+
+
+
+        $data = Input::get('tahap1Selection');
+        $data = $request->session()->put('data');
+        return redirect('tahap-2')->with($data);
     }
 
-    public function getTahap2() {
-        return view('tahap2Form', array(
-            'title' => 'Tahap 2'
-        ));
+    public function getTahap2(Request $request) {
+        $data = $request->session()->get('data');
+        echo $data;
+//        if (!empty($tahap1Selection)) {
+//            echo 'yes';
+//        }
+//        return view('tahap2Form', array(
+//            'title' => 'Tahap 2'
+//        ));
     }
 
     public function postTahap2() {

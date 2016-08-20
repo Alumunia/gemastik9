@@ -20,14 +20,6 @@ class homeController extends Controller {
         return view('pages.register');
     }
 
-    public function getRegister() {
-        return view('registerPage', array(
-            'title' => 'Register Page',
-            'question' => $this->question
-        ));
-        return view('homePage', array(
-            'title' => 'home'
-        ));
-    }
+ 
 
 }

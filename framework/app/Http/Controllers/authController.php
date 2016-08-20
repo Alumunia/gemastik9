@@ -23,13 +23,6 @@ class authController extends Controller {
         return view('index');
     }
 
-    public function getLogin() {
-        return view('pages/loginPage', array(
-            'title' => 'Login Page',
-            'question' => $this->question->take(2)
-        ));
-    }
-
     public function postLogin(Request $request) {
 
         $validator = Validator::make($request->all(), [
@@ -40,7 +33,7 @@ class authController extends Controller {
         }
 
         $userdata = array(
-            'noKTP' => Input::get('noKTP'),
+            'username' => Input::get('username'),
             'password' => Input::get('password')
         );
         if (auth('member')->attempt($userdata)) {
@@ -52,14 +45,7 @@ class authController extends Controller {
         }
     }
 
-    public function getRegister() {
-        return view('pages/registerPage', array(
-            'title' => 'Register Page',
-            'question' => $this->question
-        ));
-    }
-
-    public function postRegister() {
+    public function postRegister(Request $request) {
         $question = $this->question->pluck('question');
         $parameterName = $this->question->pluck('parameter');
         $member = new \App\Member;
@@ -71,8 +57,22 @@ class authController extends Controller {
                 $member->$parameterName[$i] = Input::get($parameterName[$i]);
             }
         }
+        $validator = Validator::make($request->all(), [
 
-        $member->save();
+                    'username' => 'unique:members',
+        ]);
+        if ($validator->fails()) {
+            return redirect('/registrasi')->withInput()->withErrors($validator);
+        } else {
+            $member->save();
+            $request->session()->flash('status', 'registrasi berhasil');
+            return redirect('/');
+        }
+    }
+
+    public function logout() {
+        Auth::guard('member')->logout();
+        return redirect('/');
     }
 
 }

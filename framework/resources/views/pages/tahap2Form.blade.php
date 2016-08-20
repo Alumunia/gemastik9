@@ -1,17 +1,32 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+@extends('layouts.layout')
+
+@section('content')
+<div class='container'>
+    <form method='POST' action='tahap-1'>
+        {{ csrf_field() }}
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="file" name="tahap2Selection1"> 
+            </label>
+
+        </div>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="file" name="tahap2Selection2"> 
+            </label>
+
+        </div>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="file" name="tahap2Selection3"> 
+            </label>
+
+        </div>
+
+
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+    </form>
+</div>
+@endsection

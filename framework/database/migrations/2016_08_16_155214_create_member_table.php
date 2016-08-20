@@ -14,19 +14,17 @@ class CreateMemberTable extends Migration {
         //
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('noKTP');
+            $table->string('username');
+
             $table->string('password');
+            $table->string('noKTP');
+
             $table->string('namaLengkap');
-            $table->string('pekerjaan');
-            $table->string('jabatan');
-            $table->string('alamat');
-            $table->string('kodePos');
-            $table->string('kewarganegaraan');
-            $table->string('provinsi');
-            $table->string('kabupaten');
             $table->string('email');
-            $table->string('noHP');
-            $table->string('noTelpRumah');
+            $table->string('alamat');
+            $table->string('rt');
+            $table->string('rw');
+            $table->string('kelurahan');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -11,10 +11,14 @@
   |
  */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
-Route::get('/myName', 'homeController@index');
+Route::get('/', 'homeController@index');
 Route::get('/register', 'homeController@getRegister');
 Route::post('/postRegister', 'homeController@postRegister');
+
+Route::get('/registrasi','homeController@register');

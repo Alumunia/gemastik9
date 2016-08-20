@@ -17,7 +17,11 @@ class homeController extends Controller {
     }
 
     public function index() {
-        return view('index');
+        return view('pages.index');
+    }
+    
+    public function register() {
+        return view('pages.register');
     }
 
     public function getRegister() {

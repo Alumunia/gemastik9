@@ -3,20 +3,40 @@
 ** Project by Khaidir Afif, Rizki Adi Utomo, Fitri Juariah
 */
 
-body {
-	background: url(../images/bg.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+html {
+	position: relative;
+	min-height: 100%;
+}
 
+body {
 	font-family: 'Montserrat', sans-serif;
 
 	height: 100%;
+	margin-bottom: 50px;
 	background-color: #060;
 	color: #fff;
 	text-align: center;
 	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+.home {
+	background: url(../images/bghome.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.dashboard {
+	background: #d8e0ce;
+}
+
+h1, h2, h3 {
+	margin: 10px auto;
+}
+
+.nopadding {
+	padding: 0 !important;
 }
 
 /* Color library */
@@ -40,20 +60,65 @@ body {
 .img-logo {
 	height: 90px;
 	width: 75px;
-	margin: 50px auto 0 auto;
+	margin: 30px auto 0 auto;
 }
 
+/* Navbar custom style */
+.rev-nav {
+	max-height: 70px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
 
-/* Login box style */
-.login-box {
-	padding: 10px;
-	background: rgba(255,255,255,0.5);
+ul.rev-nav > li.left {
+	float: left;
+}
+
+ul.rev-nav > li.right {
+	float: right;
+}
+
+li.left a, li.right a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+
+.brand {
+	font-size: 25px;
+}
+
+.home-logo {
+	display: block;
+	margin: 10px auto;
+}
+
+/* Revoluc box style */
+.rev-box {
+	padding: 10px 40px;
+	background: rgba(255,255,255,0.8);
 	border-top: solid 5px #93db70;
 }
 
+.rev-box p {
+	color: #555;
+}
+
+.rev-box hr {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
 .input-box {
+	height: 40px;
 	width: 100%;
-	margin: 10px auto;
+}
+
+.form-group {
+	margin-bottom: 10px;
 }
 
 .input-btn {
@@ -70,4 +135,29 @@ body {
 .input-btn:active, .input-btn:visited, .input-btn:focus {
 	background-color: #61b03a !important;
 	border-color: #61b03a !important;
+}
+
+/* Flow image */
+.flow-image {
+	margin-top: 20px;
+}
+
+/* Sticky footer */
+.footer {
+	padding: 5px 0;
+	height: 50px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.footer p {
+	margin: 0px;
+}
+
+/* divider */
+hr.divider {
+	border: 0;
+	height: 2px;
+	background: #61b03a;
 }
